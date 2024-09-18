@@ -1,5 +1,10 @@
 rm(list = ls())
-setwd("C:/Users/gabri/OneDrive/Bureau/LDD/LDD3/S2/Projet")
+
+#MAKE SURE TO MODIFY THE PATH TO HAVE ACCESS TO THE DATAFRAMES
+GHP_France <- read.csv("GHP_France.csv", sep = ',', header = T)
+df <- read.csv("Données projet-bi.csv", sep = ',', header = T)
+icon_path <- "C:/Users/gabri/OneDrive/Bureau/LDD/LDD3/S2/Projet/Logo_COP_21_Paris_2015.png"
+DF <- read.csv("Données.csv", sep = ',', header = T)
 
 
 library(ggplot2)
@@ -16,12 +21,6 @@ library(regclass)
 library(corrr)
 library(broom)
 library(gt)
-
-GHP_France <- read.csv("GHP_France.csv", sep = ',', header = T)
-df <- read.csv("Données projet-bi.csv", sep = ',', header = T)
-
-
-icon_path <- "C:/Users/gabri/OneDrive/Bureau/LDD/LDD3/S2/Projet/Logo_COP_21_Paris_2015.png"
 
 image_height_start <- max(GHP_France$GHP) * 0.85
 offset_for_arrow_start <- max(GHP_France$GHP) * 0.05 
@@ -203,7 +202,6 @@ ggplot(df[seq(25, 32, 1),], aes(x=log(Taxe_Initiale), y=CO2, color=factor(Annee)
 
 
 #Je crée un nouveau dataframe en changeant le nom des variables pour améliorer la compréhension
-DF <- read.csv("Données.csv", sep = ',', header = T)
 df_reg <- DF %>%
   rename(
     "CO2" = CO2,
