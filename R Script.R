@@ -4,7 +4,7 @@ rm(list = ls())
 GHP_France <- read.csv("GHP_France.csv", sep = ',', header = T)
 df <- read.csv("datas_for_graphs.csv", sep = ',', header = T)
 icon_path <- "Logo_COP_21_Paris_2015.png"
-DF <- read.csv("Données.csv", sep = ',', header = T)
+DF <- read.csv("datas.csv", sep = ',', header = T)
 
 
 library(ggplot2)
