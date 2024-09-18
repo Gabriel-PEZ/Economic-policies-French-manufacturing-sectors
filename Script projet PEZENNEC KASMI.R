@@ -3,7 +3,7 @@ rm(list = ls())
 #MAKE SURE TO MODIFY THE PATH TO HAVE ACCESS TO THE DATAFRAMES
 GHP_France <- read.csv("GHP_France.csv", sep = ',', header = T)
 df <- read.csv("Données projet-bi.csv", sep = ',', header = T)
-icon_path <- "C:/Users/gabri/OneDrive/Bureau/LDD/LDD3/S2/Projet/Logo_COP_21_Paris_2015.png"
+icon_path <- "Logo_COP_21_Paris_2015.png"
 DF <- read.csv("Données.csv", sep = ',', header = T)
 
 
